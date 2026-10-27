@@ -1,0 +1,50 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Turn an idea into a useful digital project with a small first version and practical AI assistance.">
+  <title>Build One Step at a Time | ElyiteX</title>
+  <style>
+    body{margin:0;background:#05090e;color:#f4f8fc;font:16px/1.8 system-ui,sans-serif}
+    header,footer{padding:20px 4%;background:#030609;border-bottom:1px solid #243442}
+    main{max-width:800px;margin:auto;padding:30px 4% 60px}
+    a{color:#13baff;text-decoration:none}
+    .tag{color:#13baff;font-size:.8rem;font-weight:900;letter-spacing:.15em}
+    h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.08;letter-spacing:-.05em}
+    h2{margin-top:32px;line-height:1.3}
+    p{color:#d0dce6}
+  </style>
+</head>
+<body>
+<header><a href="https://elyitex.com/"><strong>ELYITEX</strong></a> · <a href="../field-notes.html">Field Notes</a></header>
+<main>
+  <div class="tag">CREATE / DIGITAL PROJECTS</div>
+  <h1>From Idea to Online: Build a Small Project One Step at a Time</h1>
+  <p>A big idea can feel exciting and overwhelming at the same time. The way forward is to make the first version small enough to finish. You don't need a perfect brand, dozens of features, or an expensive tool stack to test whether an idea is useful.</p>
+
+  <h2>1. Define the person and the problem</h2>
+  <p>Write one sentence: “This project helps [person] do [specific task] more easily.” If that sentence is vague, narrow the audience or problem before you start building.</p>
+
+  <h2>2. Choose the smallest useful version</h2>
+  <p>List everything you might add, then identify the one feature that proves the idea. For a website, that might be a clear homepage, one useful article, and a working contact link. Save the extras for later.</p>
+
+  <h2>3. Use AI as a collaborator</h2>
+  <p>AI can help outline a page, brainstorm headlines, explain code, draft social posts, or build a checklist. Give it real constraints and review the output. Verify factual claims, test code and links, and replace generic statements with your own experience.</p>
+
+  <h2>4. Publish, then test</h2>
+  <p>Ask a few people to try your project on a phone and a computer. Can they understand what it does? Can they find the main action? Do the links work? Fix the biggest friction point before adding features.</p>
+
+  <h2>5. Keep a short improvement list</h2>
+  <p>Sort feedback into three groups: “fix now,” “consider later,” and “not needed.” Make one improvement at a time and keep a copy of the last working version. A small project you can maintain is more valuable than an ambitious project you abandon.</p>
+
+  <h2>The takeaway</h2>
+  <p>Creation is a cycle: make a useful first version, put it in front of people, learn, and improve. Progress comes from finishing the next step—not planning every possible step at once.</p>
+
+  <p><strong>What idea are you ready to bring to life?</strong> Share it with <a href="mailto:hello@elyitex.com">ElyiteX</a>.</p>
+  <p><a href="../field-notes.html">← Back to all Field Notes</a></p>
+</main>
+<footer>PLAY. EXPLORE. CREATE. · ElyiteX</footer>
+</body>
+</html>
