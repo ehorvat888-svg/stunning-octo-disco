@@ -1,0 +1,131 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ElyiteX Field Notes: gaming, outdoor adventures, and creative digital projects.">
+  <title>Field Notes | ElyiteX</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #05090e;
+      --panel: #0b131c;
+      --blue: #13baff;
+      --text: #f4f8fc;
+      --muted: #a8b6c5;
+      --line: #243442;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.7 system-ui, sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1080px, 92%); margin: auto; }
+    header, footer {
+      padding: 20px 0;
+      background: #030609;
+      border-bottom: 1px solid var(--line);
+    }
+    header .wrap, footer .wrap {
+      display: flex; justify-content: space-between;
+      align-items: center; gap: 16px; flex-wrap: wrap;
+    }
+    .logo { font-size: 1.5rem; font-weight: 950; letter-spacing: -.06em; }
+    .logo span, .eyebrow, .read { color: var(--blue); }
+    .hero {
+      padding: 70px 0 48px;
+      background: linear-gradient(120deg, #0b1721, var(--bg));
+      border-bottom: 1px solid var(--line);
+    }
+    .eyebrow {
+      font-size: .75rem; font-weight: 900;
+      letter-spacing: .18em; text-transform: uppercase;
+    }
+    h1 {
+      font-size: clamp(2.7rem, 7vw, 5rem);
+      line-height: 1; letter-spacing: -.06em;
+    }
+    .lead { max-width: 720px; color: #d0dce6; font-size: 1.1rem; }
+    .grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 18px; padding: 46px 0 64px;
+    }
+    .card {
+      background: var(--panel); border: 1px solid var(--line);
+      padding: 24px; display: flex; flex-direction: column;
+    }
+    .card h2 { font-size: 1.45rem; line-height: 1.2; }
+    .card p { color: var(--muted); }
+    .read { margin-top: auto; font-weight: 900; }
+    .note { padding: 22px; border: 1px solid var(--line); margin-bottom: 54px; }
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="https://elyitex.com/">ELYITE<span>X</span></a>
+    <a href="https://elyitex.com/">← Home</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">The ElyiteX Field Journal</div>
+      <h1>PLAY. EXPLORE.<br><span style="color:#13baff">CREATE.</span></h1>
+      <p class="lead">
+        Ideas for better gameplay, meaningful time outdoors, and turning
+        a spark of inspiration into something real. Three paths, one mindset:
+        keep learning, keep moving, keep creating.
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap grid" aria-label="Latest articles">
+    <article class="card">
+      <div class="eyebrow">01 / Play</div>
+      <h2>Train With Purpose</h2>
+      <p>A practical gaming improvement loop: focus, practice, review, repeat.</p>
+      <a class="read" href="articles/play-train-with-purpose.html">Read article →</a>
+    </article>
+
+    <article class="card">
+      <div class="eyebrow">02 / Explore</div>
+      <h2>Make the Trip Count</h2>
+      <p>A simple checklist for more prepared, enjoyable outdoor adventures.</p>
+      <a class="read" href="articles/explore-make-the-trip-count.html">Read article →</a>
+    </article>
+
+    <article class="card">
+      <div class="eyebrow">03 / Create</div>
+      <h2>Build One Step at a Time</h2>
+      <p>Turn an idea into a useful first version without overthinking it.</p>
+      <a class="read" href="articles/create-one-step-at-a-time.html">Read article →</a>
+    </article>
+  </section>
+
+  <section class="wrap note">
+    <strong>Real curiosity. Practical ideas. Continuous improvement.</strong>
+    <p>
+      AI can help us brainstorm and create, but the goal is to share useful
+      information, test what we publish, and add real experience along the way.
+    </p>
+    <a class="read" href="mailto:hello@elyitex.com">Get in touch →</a>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© ElyiteX</span>
+    <strong style="color:#13baff">PLAY. EXPLORE. CREATE.</strong>
+  </div>
+</footer>
+</body>
+</html>
