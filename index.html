@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#05090e">
+<meta name="description" content="ElyiteX — Play. Explore. Create. Gaming, outdoor adventures, and business under one brand.">
+<title>ElyiteX — Play. Explore. Create.</title>
+<style>
+:root{--bg:#05090e;--panel:#0b131c;--blue:#13baff;--blue2:#087fcb;--white:#f4f8fc;--muted:#a8b6c5;--line:rgba(150,190,220,.2);--max:1180px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(4,8,13,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{font-size:clamp(1.45rem,3vw,2rem);font-weight:950;letter-spacing:-.07em;line-height:1;color:var(--white)}
+.logo span{color:var(--blue);font-style:italic}
+.navlinks{display:flex;align-items:center;gap:clamp(14px,2.2vw,30px)}
+.navlinks a{font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;font-weight:800;color:#d6e0e9;transition:color .2s}
+.navlinks a:hover,.navlinks a:focus-visible{color:var(--blue)}
+.nav-cta,.button{display:inline-flex;justify-content:center;align-items:center;gap:10px;padding:12px 18px;border:1px solid var(--blue);color:var(--white);background:rgba(19,186,255,.07);font-size:.78rem;font-weight:850;letter-spacing:.1em;text-transform:uppercase;transition:background .2s,transform .2s}
+.nav-cta:hover,.button:hover{background:rgba(19,186,255,.18);transform:translateY(-2px)}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);color:white;border-radius:8px;padding:8px 10px}
+.hero{position:relative;isolation:isolate;min-height:620px;display:grid;align-items:center;overflow:hidden;border-bottom:1px solid var(--line);background:#08111a}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(2,7,12,.94),rgba(2,7,12,.68) 48%,rgba(2,7,12,.3)),url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2200&q=85') center 48%/cover}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 75% 45%,rgba(19,186,255,.14),transparent 40%),linear-gradient(0deg,var(--bg),transparent 30%)}
+.hero-content{padding:90px 0 110px;max-width:760px}
+.eyebrow{color:var(--blue);font-weight:850;letter-spacing:.24em;text-transform:uppercase;font-size:.76rem}
+h1{font-size:clamp(3.5rem,10vw,7.7rem);line-height:.88;letter-spacing:-.075em;margin:20px 0 22px;font-weight:950}
+h1 span{color:var(--blue);text-shadow:0 0 38px rgba(19,186,255,.22)}
+.hero p{font-size:clamp(1.05rem,2vw,1.25rem);max-width:570px;color:#d4e0ea;margin:0 0 30px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.button.primary{background:var(--blue);color:#03101a;border-color:var(--blue)}
+.button.primary:hover{background:#75d9ff}
+.hero-note{margin-top:42px;display:flex;gap:18px;flex-wrap:wrap;color:#b7c6d4;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+.hero-note span::before{content:"✦";color:var(--blue);margin-right:8px}
+section{padding:88px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:32px}
+.section-head h2{font-size:clamp(2rem,5vw,3.4rem);line-height:1.02;letter-spacing:-.055em;margin:10px 0 0}
+.section-head p{color:var(--muted);max-width:420px;margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{position:relative;overflow:hidden;min-height:390px;border:1px solid var(--line);background:var(--panel);display:flex;flex-direction:column;justify-content:end;isolation:isolate}
+.card::before{content:"";position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center;transition:transform .5s}
+.card:hover::before{transform:scale(1.05)}
+.card::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(3,8,13,.98),rgba(3,8,13,.75) 44%,rgba(3,8,13,.06))}
+.card.gaming::before{background-image:url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1000&q=80')}
+.card.adventures::before{background-image:url('https://images.unsplash.com/photo-1517299321609-52687d1bc55a?auto=format&fit=crop&w=1000&q=80')}
+.card.business::before{background-image:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80')}
+.card-body{padding:28px}
+.card .number{color:var(--blue);font-size:.75rem;font-weight:900;letter-spacing:.18em}
+.card h3{font-size:1.75rem;letter-spacing:-.04em;margin:8px 0}
+.card p{color:#c0ced9;margin:0 0 22px;max-width:350px}
+.text-link{color:var(--blue);font-size:.78rem;letter-spacing:.12em;font-weight:900;text-transform:uppercase}
+.text-link span{display:inline-block;transition:transform .2s}
+.text-link:hover span{transform:translateX(5px)}
+.mission{background:linear-gradient(120deg,#0b1721,#060b11 70%);border-block:1px solid var(--line)}
+.mission-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}
+.mission-mark{font-size:clamp(5rem,12vw,10rem);line-height:.8;font-weight:950;letter-spacing:-.1em;color:var(--blue);text-shadow:0 0 50px rgba(19,186,255,.18)}
+.mission-mark small{display:block;font-size:1rem;line-height:1.4;letter-spacing:.1em;text-transform:uppercase;color:#c4d3df;margin-top:24px}
+.mission h2{font-size:clamp(2rem,5vw,3.3rem);line-height:1.05;letter-spacing:-.05em;margin:12px 0 18px}
+.mission p{color:var(--muted);max-width:680px}
+.values{display:flex;gap:22px;flex-wrap:wrap;margin-top:28px}
+.values span{font-weight:850;letter-spacing:.14em;text-transform:uppercase;font-size:.78rem}
+.values b{color:var(--blue);margin-right:8px}
+.journey{padding:75px 0;text-align:center;background:linear-gradient(0deg,rgba(3,8,13,.82),rgba(3,8,13,.82)),url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=80') center/cover}
+.journey h2{font-size:clamp(2rem,5vw,3.5rem);letter-spacing:.1em;margin:10px 0}
+.journey p{color:#d0dce6;margin:0 auto 25px}
+footer{padding:28px 0 20px;border-top:1px solid var(--line);background:#030609}
+.footer-top{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-bottom:24px}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap}
+.footer-links a{font-size:.72rem;color:#c4d0da;text-transform:uppercase;letter-spacing:.1em}
+.footer-bottom{border-top:1px solid var(--line);padding-top:16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#7f919f;font-size:.78rem}
+footer .tagline{color:var(--blue);letter-spacing:.15em;font-weight:850;text-transform:uppercase}
+:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+@media(max-width:850px){.navlinks{gap:12px}.navlinks a{font-size:.68rem}.nav-cta{display:none}.cards{grid-template-columns:1fr}.card{min-height:330px}.mission-grid{gap:28px}}
+@media(max-width:680px){.container{width:min(100% - 28px,var(--max))}.nav{min-height:64px}.menu-toggle{display:block}.navlinks{display:none;position:absolute;top:64px;left:0;right:0;padding:18px 22px 22px;background:rgba(4,8,13,.98);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}.navlinks a{padding:13px 4px;border-bottom:1px solid rgba(150,190,220,.12);font-size:.78rem}.hero{min-height:590px}.hero-content{padding:76px 0 80px}.section-head{display:block}.section-head p{margin-top:16px}.mission-grid{grid-template-columns:1fr}.mission-mark{font-size:6rem}.mission-mark small{font-size:.78rem;margin-top:14px}.footer-top{align-items:flex-start;flex-direction:column}.footer-links{gap:14px}.hero-note{gap:10px;font-size:.68rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#home" aria-label="ElyiteX home">ELYITE<span>X</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navlinks" aria-label="Open navigation menu">☰ Menu</button>
+    <nav class="navlinks" id="navlinks" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#gaming">Gaming</a><a href="#adventures">Adventures</a><a href="#business">Business</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Let's Connect ↗</a>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <div class="eyebrow">One brand. Unlimited possibilities.</div>
+      <h1>PLAY.<br>EXPLORE.<br><span>CREATE.</span></h1>
+      <p>From the next big gaming moment to the road less traveled—and the ideas that become something more. This is ElyiteX.</p>
+      <div class="hero-actions"><a class="button primary" href="#worlds">Explore ElyiteX ↓</a><a class="button" href="#about">Our mission ↗</a></div>
+      <div class="hero-note"><span>Gaming</span><span>Adventure</span><span>Entrepreneurship</span></div>
+    </div>
+  </section>
+
+  <section id="worlds">
+    <div class="container">
+      <div class="section-head"><div><div class="eyebrow">Three paths. One identity.</div><h2>Find your next<br>adventure.</h2></div><p>Different passions, the same mindset: stay curious, keep moving, and build something worth sharing.</p></div>
+      <div class="cards">
+        <article class="card gaming" id="gaming"><div class="card-body"><div class="number">01 / PLAY</div><h3>Gaming</h3><p>Gameplay, highlights, competitive moments, and the community around the games we love.</p><a class="text-link" href="#contact">Explore gaming <span>→</span></a></div></article>
+        <article class="card adventures" id="adventures"><div class="card-body"><div class="number">02 / EXPLORE</div><h3>Adventures</h3><p>Snow, trails, road trips, family memories, and time outside that reminds us what matters.</p><a class="text-link" href="#contact">Explore adventures <span>→</span></a></div></article>
+        <article class="card business" id="business"><div class="card-body"><div class="number">03 / CREATE</div><h3>Business</h3><p>Ideas, digital projects, collaborations, and practical ways to turn ambition into action.</p><a class="text-link" href="#contact">Explore business <span>→</span></a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="mission" id="about">
+    <div class="container mission-grid">
+      <div class="mission-mark">X<small>More than a brand.<br>It's a way forward.</small></div>
+      <div><div class="eyebrow">The ElyiteX mindset</div><h2>Built for people who don't sit still.</h2><p>ElyiteX brings gaming, outdoor adventure, and entrepreneurship together in one place. We believe life is better when you challenge yourself, spend time exploring, and keep creating what comes next.</p><p>No single lane. No finish line. Just progress—one step at a time.</p><div class="values"><span><b>✦</b> Play</span><span><b>✦</b> Explore</span><span><b>✦</b> Create</span></div></div>
+    </div>
+  </section>
+
+  <section class="journey" id="contact">
+    <div class="container"><div class="eyebrow">Your next chapter starts here</div><h2>JOIN THE JOURNEY.</h2><p>Gaming. Adventures. Business. All in one place.</p><a class="button primary" href="mailto:hello@elyitex.com?subject=Hello%20ElyiteX">Contact ElyiteX ↗</a></div>
+  </section>
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-top"><a class="logo" href="#home">ELYITE<span>X</span></a><nav class="footer-links" aria-label="Footer navigation"><a href="#home">Home</a><a href="#gaming">Gaming</a><a href="#adventures">Adventures</a><a href="#business">Business</a><a href="#about">About</a><a href="#contact">Contact</a></nav><div class="tagline">Play. Explore. Create.</div></div>
+    <div class="footer-bottom"><span>© <span id="year"></span> ElyiteX. All rights reserved.</span><span>Built for the journey ahead.</span></div>
+  </div>
+</footer>
+<script>
+const toggle=document.getElementById('menuToggle');
+const nav=document.getElementById('navlinks');
+toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕ Close':'☰ Menu';});
+nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='☰ Menu';}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
